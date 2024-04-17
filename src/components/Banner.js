@@ -36,7 +36,7 @@ const Banner = () => {
 
 
   return (
-    <motion.div className="banner" variants={banner}>
+    <motion.div className="banner leading-[20rem]" variants={banner}>
       <BannerRowTop title={"brand"} />
       <BannerRowCenter title={"fashion"} playMarquee={playMarquee} />
       <BannerRowBottom title={"studio"} />
