@@ -9,7 +9,8 @@ import gsap from "gsap";
 const Hero = () => {
   return (
     <section
-      className="bg-pink-200 h-[800px] bg-hero bg-no-repeat bg-cover bg-center py-24 heroPage"
+      className="bg-pink-200 h-[800px] bg-hero bg-no-repeat bg-cover bg-center py-24"
+      id="heroPage"
     >
       {/* top leaves */}
       <div className="absolute z-10 leaf -mt-[120px] ml-[180px] rotate-90 opacity-55">
@@ -51,7 +52,7 @@ const Hero = () => {
           </div>
           <h1 className="text-[70px] leading-1.1 font-light mb-4 z-20">
             AUTUMN SALE STYLISH <br />
-            <span className="font-semibold z-20">WOMENS</span>
+            <span className="font-semibold z-20 text-[70px]">WOMENS</span>
           </h1>
         </div>
         <div className="hidden lg:block z-30">
@@ -69,7 +70,7 @@ const Hero = () => {
 };
 
 window.onload = () => {
-  const heroPage = document.querySelector(".heroPage");
+  const heroPage = document.querySelector("#heroPage");
   const leafMove = document.querySelectorAll(".leaf");
 
   heroPage.addEventListener("mousemove", function (dets) {
