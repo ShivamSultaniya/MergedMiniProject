@@ -5,9 +5,9 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    @media (max-width: $layout-breakpoint-medium) {
+    @media (max-width: $layout-breakpoint-small) {
       &:first-child {
-        margin-top: 0px;
+        margin-top: 48px;
       }
     }
     &.center {
@@ -22,18 +22,17 @@
     }
     .row-title,
     .row-letter {
-      font-size: 20rem;
+      font-size: 28rem;
       font-weight: 500;
       position: relative;
-      left: 3%;
       letter-spacing: -0.8rem;
       display: inline-block;
       white-space: nowrap;
-      @media (max-width: $layout-breakpoint-small) {
-        font-size: 12rem;
+      @media (max-width: $layout-breakpoint-medium) {
+        font-size: 18rem;
       }
       @media (max-width: $layout-breakpoint-xsmall) {
-        font-size: 8rem;
+        font-size: 10rem;
       }
     }
     .row-col {
@@ -41,7 +40,7 @@
       display: flex;
       align-content: center;
       justify-content: center;
-      @media (max-width: $layout-breakpoint-xsmall) {
+      @media (max-width: $layout-breakpoint-medium) {
         width: 70%;
       }
       @media (max-width: 1240px) {
@@ -49,20 +48,27 @@
           display: none;
         }
       }
-      @media (max-width: $layout-breakpoint-small) {
+      @media (max-width: $layout-breakpoint-xsmall) {
         width: 100%;
         justify-content: flex-start;
       }
       .row-message {
         font-weight: 500;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        width: 260px;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        width: 320px;
+        @media (max-width: $layout-breakpoint-medium) {
+          width: 100%;
+          justify-content: flex-start;
+          font-size: 1.2rem;
+          line-height: 2rem;
+          width: 190px;
+        }
       }
     }
     .scroll {
-      height: 100px;
-      width: 100px;
+      height: 160px;
+      width: 160px;
       border-radius: 100%;
       background: $white;
       position: absolute;
@@ -70,9 +76,11 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      left: 130px;
-      @media (max-width: $layout-breakpoint-small) {
-        left: 60px;
+      left: 160px;
+      @media (max-width: $layout-breakpoint-medium) {
+        height: 120px;
+        width: 120px;
+        left: 120px;
       }
       @media (max-width: 1240px) {
         display: none;
@@ -81,6 +89,11 @@
         font-size: 18px;
         font-weight: 600;
         margin: 4px 0;
+        color: black;
+        @media (max-width: $layout-breakpoint-medium) {
+          font-size: 15px;
+          margin: 2px 0;
+        }
         @media (max-width: $layout-breakpoint-xsmall) {
           font-size: 10px;
           margin: 2px 0;
@@ -102,18 +115,18 @@
   img {
     width: 550px;
     display: flex;
-    @media (max-width: $layout-breakpoint-small) {
-      width: 300px;
-    }
   }
   &.final {
     display: block;
-    top: -90px;
+    top: -120px;
     position: relative;
     width: 90%;
     margin: 0 auto;
     z-index: -100;
-    @media (max-width: $layout-breakpoint-small) {
+    @media (max-width: $layout-breakpoint-medium) {
+      top: -78px;
+    }
+    @media (max-width: $layout-breakpoint-xsmall) {
       top: -48px;
     }
     img {
@@ -121,4 +134,7 @@
       max-width: 100%;
     }
   }
+}
+.anchor{
+  text-decoration: none;
 }
